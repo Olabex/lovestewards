@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="148" height="148" viewBox="0 0 148 148" role="img" aria-labelledby="title desc">
+  <title id="title">A message becomes a love gift</title>
+  <desc id="desc">A chat message turns into a gift with a heart bow, flies across the card to a friend, and makes them smile with heart eyes.</desc>
+  <defs>
+    <path id="heart" d="M0 4.5C-6 0-6.5-3.2-4.6-5-3-6.4-.8-5.8 0-3.8.8-5.8 3-6.4 4.6-5 6.5-3.2 6 0 0 4.5Z"/>
+  </defs>
+  <style>
+    .a { animation-duration: 7s; animation-iteration-count: infinite; animation-timing-function: linear; }
+    .scene { animation-name: scene; }
+    .bubble { animation-name: bubble; opacity: 0; }
+    .dot { animation: dot .6s ease-in-out infinite; }
+    .dot:nth-child(2) { animation-delay: .15s; }
+    .dot:nth-child(3) { animation-delay: .3s; }
+    .fly { animation-name: fly; }
+    .pop { animation-name: pop; opacity: 0; }
+    .ring { animation-name: ring; opacity: 0; }
+    .spark { animation-name: spark; opacity: 0; }
+    .burst { animation-name: burst; opacity: 0; }
+    .bounce { animation-name: bounce; }
+    .eyes-n, .mouth-s { animation-name: neutral; opacity: 0; }
+    .eyes-l { animation-name: love; opacity: 1; transform-origin: 0 -2px; }
+    .beat { animation: beat .9s ease-in-out infinite; transform-origin: 0 -2px; }
+    .mouth-b { animation-name: wide; opacity: 1; }
+    .cheek { animation-name: cheek; opacity: .75; }
+    .rise { animation-name: rise; opacity: 1; }
+    .r2 { animation-delay: -6.75s; }
+    .r3 { animation-delay: -6.5s; }
+
+    @keyframes scene { 0% { opacity: 0 } 3%, 94% { opacity: 1 } 100% { opacity: 0 } }
+    @keyframes bubble {
+      0% { opacity: 0; transform: scale(0) }
+      5% { opacity: 1; transform: scale(1.12) }
+      8%, 17% { opacity: 1; transform: scale(1) rotate(0) }
+      24%, 100% { opacity: 0; transform: scale(.2) rotate(120deg) }
+    }
+    @keyframes dot { 50% { transform: translateY(-3px) } }
+    @keyframes fly {
+      0%, 31.4% { transform: translate(0, 0) }
+      37.9% { transform: translate(15px, -26px) }
+      44.3% { transform: translate(30px, -32px) }
+      50.7% { transform: translate(45px, -18px) }
+      57.1%, 100% { transform: translate(60px, 16px) }
+    }
+    @keyframes pop {
+      0%, 17.1% { opacity: 0; transform: scale(0) rotate(-120deg) }
+      22% { opacity: 1; transform: scale(1.25) rotate(8deg) }
+      27.1%, 31.4% { opacity: 1; transform: scale(1) rotate(0) }
+      44.3% { opacity: 1; transform: scale(.92) rotate(14deg) }
+      55% { opacity: 1; transform: scale(.85) rotate(-8deg) }
+      57.1% { opacity: 1; transform: scale(.85) rotate(0) }
+      59.5%, 100% { opacity: 0; transform: scale(.3) rotate(0) }
+    }
+    @keyframes ring {
+      0%, 17% { opacity: 0; transform: scale(.3) }
+      19% { opacity: .9 }
+      27%, 100% { opacity: 0; transform: scale(2.6) }
+    }
+    @keyframes spark {
+      0%, 18% { opacity: 0; transform: translate(0, 0) scale(1) }
+      20% { opacity: 1 }
+      28%, 100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(.3) }
+    }
+    @keyframes burst {
+      0%, 57% { opacity: 0; transform: translate(0, 0) scale(0) }
+      59.5% { opacity: 1; transform: translate(calc(var(--dx) * .4), calc(var(--dy) * .4)) scale(.8) }
+      70%, 100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(1) }
+    }
+    @keyframes bounce {
+      0%, 57%, 63%, 69%, 100% { transform: translateY(0) }
+      60% { transform: translateY(-7px) }
+      66% { transform: translateY(-4px) }
+    }
+    @keyframes neutral { 0%, 57% { opacity: 1 } 59%, 100% { opacity: 0 } }
+    @keyframes love {
+      0%, 57% { opacity: 0; transform: scale(0) }
+      60% { opacity: 1; transform: scale(1.4) }
+      64%, 100% { opacity: 1; transform: scale(1) }
+    }
+    @keyframes beat { 50% { transform: scale(1.18) } }
+    @keyframes wide { 0%, 57% { opacity: 0 } 59%, 100% { opacity: 1 } }
+    @keyframes cheek { 0%, 57% { opacity: .25 } 62%, 100% { opacity: .75 } }
+    @keyframes rise {
+      0%, 61% { opacity: 0; transform: translateY(8px) scale(.4) }
+      67% { opacity: 1; transform: translateY(0) scale(1) }
+      84% { opacity: .9; transform: translateY(-20px) scale(1) }
+      89%, 100% { opacity: 0; transform: translateY(-24px) scale(1) }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="147" height="147" rx="2.5" fill="#222735" stroke="#323A49"/>
+
+  <g class="a scene">
+    <path d="M36 84Q64 12 96 100" fill="none" stroke="#D6B07B" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4" opacity=".22"/>
+
+    <!-- message icon -->
+    <g transform="translate(36 84)">
+      <g class="a bubble">
+        <rect x="-18" y="-14" width="36" height="26" rx="8" fill="#D6B07B"/>
+        <path d="M-11 10L-15 20L-1 10Z" fill="#D6B07B"/>
+        <circle class="dot" cx="-8" cy="-1" r="2.4" fill="#222735"/>
+        <circle class="dot" cx="0" cy="-1" r="2.4" fill="#222735"/>
+        <circle class="dot" cx="8" cy="-1" r="2.4" fill="#222735"/>
+      </g>
+      <circle class="a ring" r="12" fill="none" stroke="#D6B07B" stroke-width="2" vector-effect="non-scaling-stroke"/>
+      <circle class="a spark" r="1.7" fill="#D6B07B" style="--dx:0px;--dy:-22px"/>
+      <circle class="a spark" r="1.7" fill="#EA6F84" style="--dx:19px;--dy:-11px"/>
+      <circle class="a spark" r="1.7" fill="#D6B07B" style="--dx:19px;--dy:11px"/>
+      <circle class="a spark" r="1.7" fill="#EA6F84" style="--dx:0px;--dy:22px"/>
+      <circle class="a spark" r="1.7" fill="#D6B07B" style="--dx:-19px;--dy:11px"/>
+      <circle class="a spark" r="1.7" fill="#EA6F84" style="--dx:-19px;--dy:-11px"/>
+
+      <!-- love gift, flies to the receiver -->
+      <g class="a fly">
+        <g class="a pop">
+          <rect x="-12" y="-3" width="24" height="16" rx="2" fill="#D6B07B"/>
+          <rect x="-14" y="-9" width="28" height="7" rx="2" fill="#E4C39A"/>
+          <rect x="-2.2" y="-9" width="4.4" height="22" fill="#EA6F84"/>
+          <use href="#heart" transform="translate(-5 -12.5) scale(.9) rotate(-18)" fill="#EA6F84"/>
+          <use href="#heart" transform="translate(5 -12.5) scale(.9) rotate(18)" fill="#EA6F84"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- hearts bursting where the gift lands -->
+    <g transform="translate(96 100)">
+      <use class="a burst" href="#heart" fill="#EA6F84" style="--dx:-18px;--dy:-10px"/>
+      <use class="a burst" href="#heart" fill="#E4C39A" style="--dx:-8px;--dy:-22px"/>
+      <use class="a burst" href="#heart" fill="#EA6F84" style="--dx:6px;--dy:-24px"/>
+      <use class="a burst" href="#heart" fill="#E4C39A" style="--dx:-24px;--dy:4px"/>
+      <use class="a burst" href="#heart" fill="#EA6F84" style="--dx:-12px;--dy:14px"/>
+    </g>
+
+    <!-- receiver -->
+    <g transform="translate(112 78)">
+      <g class="a bounce">
+        <path d="M-21 46C-21 26-13 19 0 19 13 19 21 26 21 46Z" fill="#D6B07B"/>
+        <circle r="14" fill="#E4C39A"/>
+        <ellipse class="a cheek" cx="-9" cy="5" rx="3.2" ry="2" fill="#EA6F84"/>
+        <ellipse class="a cheek" cx="9" cy="5" rx="3.2" ry="2" fill="#EA6F84"/>
+        <g class="a eyes-n" fill="#222735">
+          <circle cx="-5" cy="-2" r="1.8"/>
+          <circle cx="5" cy="-2" r="1.8"/>
+        </g>
+        <g class="a eyes-l">
+          <g class="beat">
+            <use href="#heart" transform="translate(-5.2 -2) scale(.82)" fill="#D6455D"/>
+            <use href="#heart" transform="translate(5.2 -2) scale(.82)" fill="#D6455D"/>
+          </g>
+        </g>
+        <path class="a mouth-s" d="M-4 7Q0 10 4 7" fill="none" stroke="#222735" stroke-width="1.6" stroke-linecap="round"/>
+        <path class="a mouth-b" d="M-5.5 5.5Q0 14 5.5 5.5Z" fill="#222735" stroke="#222735" stroke-width="1.2" stroke-linejoin="round"/>
+      </g>
+    </g>
+
+    <!-- hearts floating up from the receiver -->
+    <g transform="translate(98 56)"><use class="a rise" href="#heart" fill="#EA6F84"/></g>
+    <g transform="translate(126 52)"><use class="a rise r2" href="#heart" fill="#EA6F84" style="transform-origin:0 0"/></g>
+    <g transform="translate(113 40)"><use class="a rise r3" href="#heart" fill="#E4C39A"/></g>
+  </g>
+</svg>

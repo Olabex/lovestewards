@@ -1,0 +1,25 @@
+{
+  "name": "Love Stewards",
+  "short_name": "Love Stewards",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#6A1D2D",
+  "background_color": "#FAF6EF",
+  "display": "standalone"
+}

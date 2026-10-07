@@ -6,3 +6,7 @@ prompt.md
 *.pen
 design-style.html
 docs/
+
+# Logo kit output and its generator (site assets live in images/brand/)
+/brand/
+/brand-generator/
